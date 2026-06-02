@@ -1,220 +1,491 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DOJANG NIGHT - La Gala del Combate. Una experiencia narrativa inmersiva.">
-  <title>DOJANG NIGHT | La Gala del Combate</title>
-  <link rel="icon" type="image/png" href="assets/logos/logo-dojang-night.png">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <header class="site-header">
-    <a href="#" class="brand-logo-link">
-      <img src="assets/logos/logo-dojang-night.png" alt="DOJANG NIGHT" class="brand-logo">
+  <title>DOJANG NIGHT | La Gala del Combate</title>
+
+  <meta
+    name="description"
+    content="DOJANG NIGHT – La Gala del Combate. Dossier visual, técnico y logístico para presentar una experiencia deportiva, cultural y familiar de taekwondo."
+  />
+
+  <link rel="icon" type="image/png" href="assets/logos/logo-dojang-night.png" />
+  <link rel="preload" as="image" href="assets/img/01_HERO_ENTRADA_AL_EVENTO.webp" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#story">Saltar al contenido</a>
+
+  <header class="site-header" aria-label="Encabezado principal">
+    <a class="brand" href="#story" aria-label="Ir al inicio" data-panel-link="0">
+      <img
+        src="assets/logos/logo-dojang-night.png"
+        alt="Logo DOJANG NIGHT"
+        class="brand-logo"
+      />
+      <span class="brand-text">
+        <strong>DOJANG NIGHT</strong>
+        <small>La Gala del Combate</small>
+      </span>
     </a>
+
+    <nav class="site-nav" aria-label="Navegación por narrativa">
+      <a href="#panel-0" data-panel-link="0">Inicio</a>
+      <a href="#panel-4" data-panel-link="4">Combate</a>
+      <a href="#panel-8" data-panel-link="8">Reconocimiento</a>
+      <a href="#panel-10" data-panel-link="10">Logística</a>
+      <a href="#panel-14" data-panel-link="14">Viabilidad</a>
+    </nav>
   </header>
 
-  <!-- Wrapper Principal -->
-  <main class="horizontal-story" id="horizontal-story">
-    <!-- Contenedor Sticky -->
-    <div class="horizontal-sticky" id="horizontal-sticky">
-      
-      <!-- Progress bar -->
-      <div class="progress-bar-container">
-        <div class="progress-bar-fill" id="progress-bar"></div>
-      </div>
+  <main>
+    <section class="horizontal-story" id="story" aria-label="Narrativa horizontal DOJANG NIGHT">
+      <div class="horizontal-sticky">
+        <div class="horizontal-progress" aria-hidden="true">
+          <div class="horizontal-progress-bar"></div>
+        </div>
 
-      <!-- Track horizontal -->
-      <div class="horizontal-track" id="horizontal-track">
+        <div class="horizontal-track">
 
-        <!-- PANEL 1 - APERTURA HERO -->
-        <section class="story-panel panel-hero" id="panel-1">
-          <div class="panel-media" data-parallax>
-            <img src="assets/img/01_HERO_ENTRADA_AL_EVENTO.webp" alt="Hero" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-overlay"></div>
-          <div class="panel-content text-center">
-            <img src="assets/logos/logo-dojang-night.png" alt="DOJANG NIGHT" class="hero-logo-large">
-            <p class="panel-kicker">La Gala del Combate</p>
-            <h1 class="panel-title">No será un torneo.<br>Será una gala marcial.</h1>
-          </div>
-        </section>
+          <!-- PANEL 0 / HOME LOGO -->
+          <article
+            class="story-panel panel-home-logo"
+            id="panel-0"
+            data-enter="0.00"
+            data-leave="1.00"
+          >
+            <div class="panel-home-bg"></div>
 
-        <!-- PANEL 2 - CONCEPTO GENERAL -->
-        <section class="story-panel split-layout" id="panel-2">
-          <div class="panel-media image-65">
-            <img src="assets/img/13_RESUMEN_VISUAL_OPERACION.webp" alt="Concepto" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Concepto General</p>
-            <h2 class="panel-title">Una experiencia marcial sobria y familiar.</h2>
-            <p class="panel-copy">Operación de alta precisión donde la logística y la calidez humana son las verdaderas protagonistas.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 3 - OPERACIÓN GENERAL -->
-        <section class="story-panel full-bleed" id="panel-3">
-          <div class="panel-media">
-            <img src="assets/img/auditorio-tatami-gajog.jpg" alt="Operación" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-overlay subtle"></div>
-          <div class="panel-content align-bottom">
-            <p class="panel-kicker">Operación</p>
-            <h2 class="panel-title">Escala Operativa</h2>
-            <div class="panel-badges">
-              <span class="badge">3 Bloques</span>
-              <span class="badge">6 Horas</span>
-              <span class="badge">200 Estudiantes</span>
-              <span class="badge">Aforo Rotativo</span>
+            <div class="panel-content home-content">
+              <img
+                src="assets/logos/logo-dojang-night.png"
+                alt="Logo DOJANG NIGHT"
+                class="home-logo-full"
+              />
+              <p class="home-subtitle">La Gala del Combate</p>
+              <p class="home-scroll-cue">Desplaza para ingresar</p>
             </div>
-          </div>
-        </section>
+          </article>
 
-        <!-- PANEL 4 - PRESENTACIÓN DEL COMBATE -->
-        <section class="story-panel split-layout reverse" id="panel-4">
-          <div class="panel-media image-65">
-            <img src="assets/img/02_PRESENTACION_COMBATE.webp" alt="Presentación" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Presentación Escénica</p>
-            <h2 class="panel-title">Cada estudiante tiene su momento.</h2>
-            <p class="panel-copy">Árbitro central, jueces de esquina y maestro de ceremonia. Cada combate se anuncia con la formalidad que merece.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 5 - COMBATE CONTROLADO -->
-        <section class="story-panel full-bleed" id="panel-5">
-          <div class="panel-media">
-            <img src="assets/img/03_COMBATE_CONTROLADO.webp" alt="Combate" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-overlay dark-gradient"></div>
-          <div class="panel-content text-box-side">
-            <p class="panel-kicker">Combate Controlado</p>
-            <h2 class="panel-title">Técnica, respeto y control.</h2>
-            <p class="panel-copy">Seguridad prioritaria. Combates estructurados por edad, nivel y protecciones adecuadas.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 6 - MESA TÉCNICA -->
-        <section class="story-panel split-layout" id="panel-6">
-          <div class="panel-media image-65">
-            <img src="assets/img/09_MESA_TECNICA_JUECES_PUNTOS.webp" alt="Mesa Técnica" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Mesa Técnica</p>
-            <h2 class="panel-title">Operación visible.</h2>
-            <p class="panel-copy">Jueces, marcador de puntos y tiempos se gestionan con total transparencia.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 7 - FREESTYLE BREAK -->
-        <section class="story-panel full-bleed" id="panel-7">
-          <div class="panel-media">
-            <img src="assets/img/08_FREESTYLE_BREAK.webp" alt="Freestyle Break" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content center-huge">
-            <p class="panel-kicker red-accent">Exhibición</p>
-            <h2 class="panel-title huge-text">Freestyle Break</h2>
-            <p class="panel-copy">La pausa es un espectáculo de alta energía.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 8 - RECONOCIMIENTO -->
-        <section class="story-panel split-layout reverse" id="panel-8">
-          <div class="panel-media image-65">
-            <img src="assets/img/04_RECONOCIMIENTO_HABILIDAD_TAEKWONDO.webp" alt="Reconocimiento" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Reconocimiento</p>
-            <h2 class="panel-title">Exaltamos el proceso.</h2>
-            <p class="panel-copy">Celebramos la disciplina, el esfuerzo y los valores del taekwondo sin podios excluyentes.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 9 - FAMILIA Y MEMORIA -->
-        <section class="story-panel full-bleed" id="panel-9">
-          <div class="panel-media">
-            <img src="assets/img/11_FOTO_FAMILIAR_RECONOCIMIENTO.webp" alt="Familia" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-overlay warm-gradient"></div>
-          <div class="panel-content align-bottom-center">
-            <p class="panel-kicker">Memoria</p>
-            <h2 class="panel-title">La familia como parte de la memoria.</h2>
-            <p class="panel-copy">Un momento cálido y humano para llevarse a casa.</p>
-          </div>
-        </section>
-
-        <!-- PANEL 10 - INGRESO MANILLAS -->
-        <section class="story-panel split-layout" id="panel-10">
-          <div class="panel-media image-65">
-            <img src="assets/img/07_CONTROL_MANILLAS_INGRESO.webp" alt="Ingreso" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Logística</p>
-            <h2 class="panel-title">Ingreso con manillas.</h2>
-            <p class="panel-copy">Identificación visual inmediata para un control de aforo infalible.</p>
-            <div class="panel-badges">
-              <span class="badge red">B1</span>
-              <span class="badge blue">B2</span>
-              <span class="badge gold">B3</span>
+          <!-- PANEL 1 -->
+          <article
+            class="story-panel panel-hero"
+            id="panel-1"
+            data-enter="0.08"
+            data-leave="1.05"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/01_HERO_ENTRADA_AL_EVENTO.webp"
+                alt="Estudiante entrando al tatami en el auditorio durante DOJANG NIGHT"
+              />
             </div>
-          </div>
-        </section>
+            <div class="panel-overlay"></div>
 
-        <!-- PANEL 11 - CAMBIO DE GRUPO -->
-        <section class="story-panel split-layout reverse" id="panel-11">
-          <div class="panel-media image-65">
-            <img src="assets/img/06_CAMBIO_DE_GRUPO_FLUJO_INFOGRAFICO.webp" alt="Cambio Grupo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Logística</p>
-            <h2 class="panel-title">Flujo continuo y ordenado.</h2>
-            <p class="panel-copy">Sin cruces innecesarios. Un recorrido diseñado para que estudiantes y familias transiten fluidamente.</p>
-          </div>
-        </section>
+            <div class="panel-content hero-content compact-overlay">
+              <div class="hero-text-group">
+                <p class="panel-kicker animate-fade-down">La Gala del Combate</p>
 
-        <!-- PANEL 12 - DESOCUPACIÓN -->
-        <section class="story-panel split-layout" id="panel-12">
-          <div class="panel-media image-65">
-            <img src="assets/img/12_DESOCUPACION_AUDITORIO.webp" alt="Desocupación" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Logística</p>
-            <h2 class="panel-title">El escenario siempre listo.</h2>
-            <p class="panel-copy">Salida ágil, limpieza rápida y preparación impecable antes del ingreso del nuevo bloque.</p>
-          </div>
-        </section>
+                <div class="split-copy hero-split" data-split-copy>
+                  <div class="split-copy-top">
+                    <span>No será un torneo.</span>
+                  </div>
+                  <div class="split-copy-bottom">
+                    <span>Será una gala marcial.</span>
+                  </div>
+                </div>
 
-        <!-- PANEL 13 - GASTRONOMÍA -->
-        <section class="story-panel full-bleed" id="panel-13">
-          <div class="panel-media">
-            <img src="assets/img/10_ZONA_GASTRONOMICA_EXTERNA.webp" alt="Gastronomía" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-overlay dark-gradient"></div>
-          <div class="panel-content text-center">
-            <p class="panel-kicker">Cultura</p>
-            <h2 class="panel-title">Gastronomía Cultural</h2>
-            <p class="panel-copy">Sabores asiáticos para compartir en familia, fuera del teatro, sin afectar el flujo del evento.</p>
-          </div>
-        </section>
+                <p class="panel-copy animate-fade-up delay-1">
+                  Hoy no vienen a ver una clase. Hoy vienen a ver el carácter de sus hijos en combate.
+                </p>
 
-        <!-- PANEL 14 - VIABILIDAD / CIERRE -->
-        <section class="story-panel split-layout reverse" id="panel-14">
-          <div class="panel-media image-65">
-            <img src="assets/img/montaje-escenico-gajog.jpg" alt="Viabilidad" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMTE0MWIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTR2dyIgZmlsbD0iIzM1M2I0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRPSkFORyBOSUdIVDwvdGV4dD48L3N2Zz4='; this.onerror=null; this.classList.add('fallback-img');">
-          </div>
-          <div class="panel-content text-35">
-            <p class="panel-kicker">Viabilidad</p>
-            <h2 class="panel-title">Beneficios Institucionales.</h2>
-            <p class="panel-copy">Un formato replicable, escalable y ordenado. Dojang Night es el futuro de nuestras galas marciales.</p>
-            <img src="assets/logos/logo-gajog-principal.png" alt="Gajog" class="closing-brand-logo">
-          </div>
-        </section>
+                <div class="panel-badges animate-stagger delay-2">
+                  <span>Disciplina</span>
+                  <span>Familia</span>
+                  <span>Respeto</span>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <!-- PANEL 2 -->
+          <article
+            class="story-panel full-image-panel panel-operation-visual"
+            id="panel-2"
+            data-enter="0.00"
+            data-leave="1.00"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/13_RESUMEN_VISUAL_OPERACION.webp"
+                alt="Resumen visual del modelo operativo por bloques del evento DOJANG NIGHT"
+              />
+            </div>
+          </article>
+
+          <!-- PANEL 3 -->
+          <article
+            class="story-panel dark-panel"
+            id="panel-3"
+            data-enter="0.10"
+            data-leave="1.05"
+          >
+            <div class="panel-content stats-content">
+              <p class="panel-kicker animate-fade-down">Operación general</p>
+              <h2 class="panel-title animate-fade-up">
+                Una jornada organizada por bloques.
+              </h2>
+
+              <div class="stats-grid animate-fade-up delay-1">
+                <div class="stat-card">
+                  <strong>200</strong>
+                  <span>estudiantes aproximados</span>
+                </div>
+                <div class="stat-card">
+                  <strong>3</strong>
+                  <span>bloques rotativos</span>
+                </div>
+                <div class="stat-card">
+                  <strong>70</strong>
+                  <span>estudiantes por grupo</span>
+                </div>
+                <div class="stat-card">
+                  <strong>6h</strong>
+                  <span>jornada total</span>
+                </div>
+              </div>
+
+              <p class="panel-copy animate-fade-up delay-2">
+                Cada grupo ingresa, participa, recibe reconocimiento y sale antes del ingreso del siguiente bloque.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 4 -->
+          <article
+            class="story-panel split-panel reverse"
+            id="panel-4"
+            data-enter="0.12"
+            data-leave="1.05"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/02_PRESENTACION_COMBATE.webp"
+                alt="Presentación de combate con árbitro, estudiantes y mesa técnica"
+              />
+            </div>
+
+            <div class="panel-content side-content">
+              <p class="panel-kicker animate-fade-down">Presentación del combate</p>
+              <h2 class="panel-title animate-fade-up">
+                Este será su momento.
+              </h2>
+              <p class="panel-copy animate-fade-up delay-1">
+                Nombre, grado, cinturón, rival asignado, saludo marcial y entrada con luz dirigida.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 5 -->
+          <article
+            class="story-panel full-image-panel"
+            id="panel-5"
+            data-enter="0.08"
+            data-leave="1.02"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/03_COMBATE_CONTROLADO.webp"
+                alt="Combate controlado de taekwondo entre estudiantes con árbitro"
+              />
+            </div>
+            <div class="panel-overlay left-gradient"></div>
+
+            <div class="panel-content overlay-content compact-overlay">
+              <p class="panel-kicker animate-fade-down">Combate controlado</p>
+
+              <div class="split-copy" data-split-copy>
+                <div class="split-copy-top">
+                  <span>No es una pelea.</span>
+                </div>
+                <div class="split-copy-bottom">
+                  <span>Es carácter en movimiento.</span>
+                </div>
+              </div>
+
+              <p class="panel-copy animate-fade-up delay-1">
+                Técnica, respeto, autocontrol, valentía y seguridad deportiva bajo supervisión.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 6 -->
+          <article
+            class="story-panel split-panel"
+            id="panel-6"
+            data-enter="0.10"
+            data-leave="1.05"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/09_MESA_TECNICA_JUECES_PUNTOS.webp"
+                alt="Mesa técnica con jueces, cronómetro y marcador del combate"
+              />
+            </div>
+
+            <div class="panel-content side-content">
+              <p class="panel-kicker animate-fade-down">Mesa técnica</p>
+              <h2 class="panel-title animate-fade-up">
+                La seriedad del evento estará visible.
+              </h2>
+              <p class="panel-copy animate-fade-up delay-1">
+                Cronograma, llamado de deportistas, tiempos, puntos, categorías y control deportivo.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 7 -->
+          <article
+            class="story-panel full-image-panel panel-freestyle"
+            id="panel-7"
+            data-enter="0.04"
+            data-leave="1.02"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/08_FREESTYLE_BREAK.webp"
+                alt="Exhibición freestyle de taekwondo durante un break del evento"
+              />
+            </div>
+            <div class="panel-overlay right-gradient"></div>
+
+            <div class="panel-content freestyle-content compact-overlay">
+              <p class="panel-kicker animate-fade-down">Break cultural y deportivo</p>
+              <h2 class="panel-title huge-title freestyle-title">
+                Freestyle Break
+              </h2>
+              <p class="panel-copy freestyle-copy">
+                Energía, técnica avanzada y expresión marcial entre bloques de combate.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 8 -->
+          <article
+            class="story-panel split-panel reverse"
+            id="panel-8"
+            data-enter="0.12"
+            data-leave="1.08"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/04_RECONOCIMIENTO_HABILIDAD_TAEKWONDO.webp"
+                alt="Reconocimiento de habilidades y valores del taekwondo a un estudiante"
+              />
+            </div>
+
+            <div class="panel-content side-content">
+              <p class="panel-kicker animate-fade-down">Reconocimiento formativo</p>
+              <h2 class="panel-title animate-fade-up">
+                Se exaltará el proceso, no solo el resultado.
+              </h2>
+
+              <div class="value-list animate-fade-up delay-1">
+                <span>Cortesía</span>
+                <span>Integridad</span>
+                <span>Perseverancia</span>
+                <span>Autocontrol</span>
+                <span>Espíritu</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PANEL 9 -->
+          <article
+            class="story-panel full-image-panel"
+            id="panel-9"
+            data-enter="0.08"
+            data-leave="1.02"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/11_FOTO_FAMILIAR_RECONOCIMIENTO.webp"
+                alt="Familia celebrando con estudiante tras recibir reconocimiento"
+              />
+            </div>
+            <div class="panel-overlay right-gradient"></div>
+
+            <div class="panel-content overlay-content right compact-overlay">
+              <p class="panel-kicker animate-fade-down">Familia y memoria</p>
+              <h2 class="panel-title animate-fade-up">
+                La familia no solo asistirá.
+              </h2>
+              <p class="panel-copy animate-fade-up delay-1">
+                Vivirá el combate como un momento compartido de orgullo, afecto y memoria.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 10 -->
+          <article
+            class="story-panel split-panel"
+            id="panel-10"
+            data-enter="0.10"
+            data-leave="1.05"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/07_CONTROL_MANILLAS_INGRESO.webp"
+                alt="Control de ingreso por manillas de colores al evento"
+              />
+            </div>
+
+            <div class="panel-content side-content">
+              <p class="panel-kicker animate-fade-down">Control de ingreso</p>
+              <h2 class="panel-title animate-fade-up">
+                Cada grupo tendrá su color.
+              </h2>
+              <p class="panel-copy animate-fade-up delay-1">
+                Las manillas permitirán controlar horarios, flujo de familias, estudiantes y acompañantes.
+              </p>
+
+              <div class="wristbands animate-stagger delay-2">
+                <span class="red">Grupo 1</span>
+                <span class="blue">Grupo 2</span>
+                <span class="gold">Grupo 3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PANEL 11 -->
+          <article
+            class="story-panel full-image-panel"
+            id="panel-11"
+            data-enter="0.08"
+            data-leave="1.02"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/06_CAMBIO_DE_GRUPO_FLUJO_INFOGRAFICO.webp"
+                alt="Flujo de cambio de grupo con salida e ingreso ordenado"
+              />
+            </div>
+            <div class="panel-overlay left-gradient"></div>
+
+            <div class="panel-content overlay-content compact-overlay">
+              <p class="panel-kicker animate-fade-down">Cambio de grupo</p>
+
+              <div class="split-copy" data-split-copy>
+                <div class="split-copy-top">
+                  <span>Salida ordenada.</span>
+                </div>
+                <div class="split-copy-bottom">
+                  <span>Nuevo ingreso sin congestión.</span>
+                </div>
+              </div>
+
+              <div class="flow-line animate-fade-up delay-1">
+                <span>Salida</span>
+                <i>→</i>
+                <span>Limpieza rápida</span>
+                <i>→</i>
+                <span>Nuevo ingreso</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PANEL 12 -->
+          <article
+            class="story-panel split-panel reverse"
+            id="panel-12"
+            data-enter="0.10"
+            data-leave="1.00"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/12_DESOCUPACION_AUDITORIO.webp"
+                alt="Desocupación ordenada del auditorio entre bloques"
+              />
+            </div>
+
+            <div class="panel-content side-content">
+              <p class="panel-kicker animate-fade-down">Desocupación del auditorio</p>
+              <h2 class="panel-title animate-fade-up">
+                El teatro se prepara para el siguiente bloque.
+              </h2>
+              <p class="panel-copy animate-fade-up delay-1">
+                La rotación permitirá mantener aforo, comodidad, limpieza y control institucional.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 13 -->
+          <article
+            class="story-panel split-panel"
+            id="panel-13"
+            data-enter="0.18"
+            data-leave="1.12"
+          >
+            <div class="panel-media">
+              <img
+                src="assets/img/10_ZONA_GASTRONOMICA_EXTERNA.webp"
+                alt="Zona gastronómica asiática o coreana fuera del teatro"
+              />
+            </div>
+
+            <div class="panel-content side-content align-right">
+              <p class="panel-kicker animate-fade-down">Cultura coreana</p>
+              <h2 class="panel-title animate-fade-up">
+                Una muestra gastronómica fuera del teatro.
+              </h2>
+              <p class="panel-copy animate-fade-up delay-1">
+                Comida asiática o coreana suave como complemento cultural, sin interferir con la operación del auditorio.
+              </p>
+            </div>
+          </article>
+
+          <!-- PANEL 14 -->
+          <article
+            class="story-panel final-panel"
+            id="panel-14"
+            data-enter="0.06"
+            data-leave="1.00"
+          >
+            <div class="panel-content final-content">
+              <p class="panel-kicker animate-fade-down">Viabilidad institucional</p>
+              <h2 class="panel-title animate-fade-up">
+                Taekwondo, familia y honor en una sola experiencia.
+              </h2>
+
+              <p class="panel-copy animate-fade-up delay-1">
+                Un evento ordenado, seguro, cultural y técnicamente ejecutable para auditorio, colegio, universidad o institución aliada.
+              </p>
+
+              <div class="final-logos animate-fade-up delay-2">
+                <img
+                  src="assets/logos/logo-dojang-night.png"
+                  alt="Logo DOJANG NIGHT"
+                  class="final-logo final-logo-dojang"
+                />
+                <img
+                  src="assets/logos/logo-gajog-principal.png"
+                  alt="Logo Gajog Taekwondo"
+                  class="final-logo final-logo-gajog"
+                />
+              </div>
+
+              <a class="cta-button animate-fade-up delay-3" href="#panel-0" data-panel-link="0">
+                Volver al inicio
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
