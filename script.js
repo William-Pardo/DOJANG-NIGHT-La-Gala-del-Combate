@@ -48,13 +48,12 @@
     return Math.min(Math.max(value, min), max);
   }
 
-  function isDesktop() {
-    return window.innerWidth >= 900;
-  }
-
   function parseAttr(panel, name, fallback) {
     const raw = panel.dataset[name];
-    if (raw === undefined) return fallback;
+
+    if (raw === undefined) {
+      return fallback;
+    }
 
     const value = parseFloat(raw);
     return Number.isFinite(value) ? value : fallback;
@@ -107,13 +106,10 @@
     const panelLeft = panelIndex * panelWidth - x;
 
     /*
-      MAPA CORREGIDO DEL AVANCE DE CADA SECCIÓN:
-
-      panelLeft =  panelWidth  → la sección empieza a entrar por la derecha → progress = 0.0
-      panelLeft =  0           → la sección está centrada / visible completa → progress = 0.6
-      panelLeft = -panelWidth  → la sección salió por la izquierda          → progress = 1.2
-
-      Esto evita que el texto aparezca tarde.
+      MAPA DE AVANCE:
+      panelLeft =  panelWidth  → sección empieza a entrar por derecha → progress = 0.0
+      panelLeft =  0           → sección alineada con viewport          → progress = 0.6
+      panelLeft = -panelWidth  → sección salió por izquierda            → progress = 1.2
     */
     return ((panelWidth - panelLeft) / (panelWidth * 2)) * 1.2;
   }
@@ -139,9 +135,11 @@
   }
 
   function setupHorizontalScroll() {
-    if (!story || !sticky || !track || panels.length === 0) return;
+    if (!story || !sticky || !track || panels.length === 0) {
+      return;
+    }
 
-    if (!isDesktop() || reducedMotion) {
+    if (reducedMotion) {
       story.style.height = "auto";
       track.style.transform = "none";
 
@@ -150,7 +148,6 @@
         panel.classList.remove("is-text-leaving");
       });
 
-      setNavState(activeIndex);
       isReady = true;
       return;
     }
@@ -172,7 +169,9 @@
   }
 
   function updateHorizontalScroll() {
-    if (!isReady || !story || !track || !isDesktop() || reducedMotion) return;
+    if (!isReady || !story || !track || reducedMotion) {
+      return;
+    }
 
     const scrollY = window.scrollY;
     const raw = scrollY - storyStart;
@@ -189,7 +188,7 @@
   }
 
   function scrollToPanel(panelIndex) {
-    if (!story || !isDesktop() || reducedMotion) {
+    if (!story || reducedMotion) {
       panels[panelIndex]?.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
@@ -214,33 +213,9 @@
     });
   }
 
-  function setupMobileObserver() {
-    if (!("IntersectionObserver" in window)) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (isDesktop() && !reducedMotion) return;
-
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = panels.indexOf(entry.target);
-            activeIndex = index;
-            setNavState(activeIndex);
-          }
-        });
-      },
-      {
-        threshold: 0.45,
-      }
-    );
-
-    panels.forEach((panel) => observer.observe(panel));
-  }
-
   function init() {
     setImageFallbacks();
     setupNav();
-    setupMobileObserver();
 
     if (window.location.hash) {
       history.replaceState(null, "", window.location.pathname + window.location.search);
